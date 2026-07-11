@@ -1,86 +1,50 @@
-# DemoQA Playwright Automation Project
+# DemoQA Playwright Automation
 
-![DemoQA Playwright Automation Tests](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/demoqa-tests.yml/badge.svg)
+![DemoQA Playwright Automation Tests](https://github.com/AsardeenAzees/Demoqa-Playwright-Automation/actions/workflows/demoqa-tests.yml/badge.svg)
 
-This repository contains an end-to-end test automation project for the [DemoQA](https://demoqa.com/) web application using **Playwright**, **JavaScript**, and **Jest**.
+A QA automation portfolio project for testing the [DemoQA](https://demoqa.com/) web application using **Playwright**, **JavaScript**, and **Jest**.
 
-The main purpose of this project is to demonstrate practical QA automation skills such as UI automation, test data handling, API helper usage, browser automation, assertions, reusable page objects, and stable test execution.
+This project demonstrates practical QA automation skills including UI automation, form validation, reusable page objects, test data handling, API helper utilities, stable test execution, and CI/CD execution with GitHub Actions.
 
 ---
 
-## Project Overview
+## Project Highlights
 
-This project automates key modules of the DemoQA website, including:
-
-- Elements page validation
-- Text Box form submission
-- Invalid email validation
-- Button interactions
-  - Double click
-  - Right click
-  - Normal click
-- Book Store page validation
-- Book search validation
-- Book details page validation
-- Profile page validation
-- Book Store API helper functions
-
-The project is designed as a QA portfolio project to demonstrate real-world test automation practices.
+- End-to-end UI automation using Playwright
+- JavaScript test scripting with Jest
+- Chromium browser automation
+- Page Object Model structure
+- JSON-based test data handling
+- Book Store API helper utilities
+- Headless and headed browser execution
+- GitHub Actions CI workflow
+- Automated test execution on every push and pull request
 
 ---
 
 ## Tech Stack
 
-| Tool / Technology | Purpose |
+| Technology | Purpose |
 |---|---|
 | Playwright | Browser automation |
 | Jest | Test runner and assertions |
 | JavaScript | Test scripting language |
 | Node.js | Runtime environment |
-| JSON | Test data management |
-| Chromium | Browser used for test execution |
+| Chromium | Browser used for automation |
+| JSON | Test data and credential configuration |
+| GitHub Actions | Continuous Integration / automated test execution |
 
 ---
 
-## Why Playwright?
+## Application Under Test
 
-Playwright is a modern automation tool used for reliable browser testing. It supports multiple browsers, fast execution, auto-waiting, and strong locator handling.
-
-In this project, Playwright is used to automate real browser actions such as:
-
-- Opening web pages
-- Filling forms
-- Clicking buttons
-- Validating page content
-- Handling UI interactions
-- Testing public web application flows
-
----
-
-## Project Structure
+The project automates test scenarios on the public DemoQA practice website:
 
 ```text
-playwright-demoqa/
-│
-├── data/
-│   └── books.json              # Test data for Book Store tests
-│
-├── pages/
-│   └── textBox.js              # Page Object Model file for Text Box page
-│
-├── tests/
-│   ├── elements.spec.js        # UI tests for Elements, Text Box, and Buttons
-│   └── bookstore.spec.js       # UI tests for Book Store module
-│
-├── utilities/
-│   └── bookstoreApi.js         # API helper functions for Book Store
-│
-├── user.json                   # Local user credentials file, ignored from Git
-├── package.json
-├── jest.config.js
-├── .gitignore
-└── README.md
+https://demoqa.com
 ```
+
+DemoQA is a sample web application commonly used for practicing UI automation, form validation, browser interactions, and API-supported testing.
 
 ---
 
@@ -88,27 +52,73 @@ playwright-demoqa/
 
 ### Elements Module
 
-| Test Scenario | Status |
-|---|---|
-| Open Elements page and verify header | Automated |
-| Collapse Elements section | Automated |
-| Submit valid Text Box form data | Automated |
-| Validate invalid email error | Automated |
-| Perform double click action | Automated |
-| Perform right click action | Automated |
-| Perform normal click action | Automated |
-
----
+| Test Scenario | Type | Status |
+|---|---|---|
+| Open Elements page and verify page content | UI Test | Automated |
+| Collapse Elements section | UI Test | Automated |
+| Submit valid Text Box form data | UI Test | Automated |
+| Validate invalid email error | Negative Test | Automated |
+| Perform double click action | Interaction Test | Automated |
+| Perform right click action | Interaction Test | Automated |
+| Perform normal click action | Interaction Test | Automated |
 
 ### Book Store Module
 
-| Test Scenario | Status |
-|---|---|
-| Open Book Store page | Automated |
-| Search for a book | Automated |
-| Open book details page | Automated |
-| Open Profile page | Automated |
-| Validate not logged-in profile state | Automated |
+| Test Scenario | Type | Status |
+|---|---|---|
+| Open Book Store page | UI Test | Automated |
+| Search for a specific book | UI Test | Automated |
+| Open book details page | UI Test | Automated |
+| Open Profile page | UI Test | Automated |
+| Validate not logged-in profile state | UI Test | Automated |
+
+---
+
+## Latest CI Execution Result
+
+The GitHub Actions workflow successfully runs the automated test suite in CI.
+
+```text
+Test Suites: 2 passed, 2 total
+Tests:       11 passed, 11 total
+Browser:     Chromium
+Runner:      Jest
+Mode:        Headless
+```
+
+The workflow runs automatically when code is pushed to the `main` branch or when a pull request is opened.
+
+---
+
+## Project Structure
+
+```text
+Demoqa-Playwright-Automation/
+│
+├── .github/
+│   └── workflows/
+│       └── demoqa-tests.yml          # GitHub Actions CI workflow
+│
+├── data/
+│   └── books.json                    # Book Store test data
+│
+├── pages/
+│   └── textBox.js                    # Page Object Model for Text Box page
+│
+├── tests/
+│   ├── elements.spec.js              # Elements, Text Box, and Buttons tests
+│   └── bookstore.spec.js             # Book Store tests
+│
+├── utilities/
+│   └── bookstoreApi.js               # Book Store API helper functions
+│
+├── user.json                         # Local credential file, ignored from Git
+├── package.json
+├── package-lock.json
+├── jest.config.js
+├── .gitignore
+└── README.md
+```
 
 ---
 
@@ -117,19 +127,25 @@ playwright-demoqa/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/playwright-demoqa.git
+git clone https://github.com/AsardeenAzees/Demoqa-Playwright-Automation.git
 ```
 
 Go to the project folder:
 
 ```bash
-cd playwright-demoqa
+cd Demoqa-Playwright-Automation
 ```
 
 Install dependencies:
 
 ```bash
 npm install
+```
+
+Install Playwright Chromium browser:
+
+```bash
+npx playwright install chromium
 ```
 
 ---
@@ -147,15 +163,9 @@ Create a `user.json` file in the root folder:
 }
 ```
 
-Important:
+Do not commit real usernames, passwords, tokens, or other secrets to GitHub.
 
-```text
-Do not commit real usernames or passwords to GitHub.
-```
-
-Make sure `user.json` is added to `.gitignore`.
-
-Example `.gitignore`:
+Recommended `.gitignore` entries:
 
 ```gitignore
 node_modules/
@@ -167,7 +177,7 @@ coverage/
 
 ---
 
-## Running Tests
+## Running Tests Locally
 
 Run all tests:
 
@@ -175,7 +185,7 @@ Run all tests:
 npm run test
 ```
 
-Run tests one by one for better stability:
+Run all tests in single-thread mode for better stability:
 
 ```bash
 npm run test -- --runInBand
@@ -193,7 +203,7 @@ Run only the Book Store test file:
 npm run test -- tests/bookstore.spec.js
 ```
 
-Run a single test by test name:
+Run a single test by name:
 
 ```bash
 npm run test -- -t "should open the Elements page"
@@ -203,11 +213,9 @@ npm run test -- -t "should open the Elements page"
 
 ## Running Tests in Headed Mode
 
-By default, Playwright runs in headless mode.
+By default, Playwright runs in **headless mode**, meaning the browser runs in the background without opening a visible browser window.
 
-Headless mode means the browser runs in the background without opening a visible browser window.
-
-To debug visually, run tests in headed mode:
+For debugging or interview demonstration, tests can be executed in headed mode.
 
 ### Windows PowerShell
 
@@ -224,161 +232,129 @@ HEADED=true npm run test -- --runInBand
 Headed mode is useful for:
 
 - Watching test execution step by step
-- Debugging failed actions
+- Debugging element interaction issues
 - Understanding browser behavior
-- Interview demonstration
+- Demonstrating automation during interviews
 
 ---
 
-## Browser Used
+## GitHub Actions CI Workflow
 
-This project currently uses **Chromium**.
+This project includes a GitHub Actions workflow that automatically runs the automation test suite when code is pushed to GitHub.
 
-Example:
+Workflow file:
+
+```text
+.github/workflows/demoqa-tests.yml
+```
+
+The CI workflow performs the following steps:
+
+1. Checks out the repository
+2. Sets up Node.js
+3. Installs project dependencies
+4. Installs the Playwright Chromium browser
+5. Creates `user.json` using GitHub repository secrets
+6. Runs the Jest automation test suite
+
+Example workflow command:
+
+```bash
+npm run test -- --runInBand
+```
+
+---
+
+## GitHub Secrets Used in CI
+
+The CI workflow uses GitHub repository secrets to generate `user.json` safely during workflow execution.
+
+| Secret Name | Purpose |
+|---|---|
+| `DEMOQA_USERNAME` | DemoQA Book Store username |
+| `DEMOQA_PASSWORD` | DemoQA Book Store password |
+
+Secrets are configured in:
+
+```text
+GitHub Repository → Settings → Secrets and variables → Actions
+```
+
+This avoids exposing credentials in the source code.
+
+---
+
+## Browser and Execution Mode
+
+| Item | Value |
+|---|---|
+| Browser | Chromium |
+| Local default mode | Headless |
+| Debug mode | Headed |
+| CI mode | Headless |
+| Test runner | Jest |
+
+Example browser launch:
 
 ```javascript
 const { chromium } = require('playwright');
-```
 
-The browser is launched through Playwright:
-
-```javascript
-browser = await chromium.launch();
-```
-
-By default, Playwright runs Chromium in headless mode.
-
----
-
-## Important Fixes and Improvements Done
-
-During test stabilization, the following issues were identified and improved:
-
-### 1. Base URL Issue
-
-Original URL:
-
-```javascript
-https://www.demoqa.com
-```
-
-Updated stable URL:
-
-```javascript
-https://demoqa.com
-```
-
-Reason:
-
-```text
-The www version caused DNS/navigation issues in Playwright.
-```
-
----
-
-### 2. Timeout Handling
-
-DemoQA can be slow because it is a public demo website with ads and external scripts.
-
-To reduce false failures, test timeout handling was improved.
-
-Example:
-
-```javascript
-jest.setTimeout(60000);
-```
-
----
-
-### 3. Better Page Loading Strategy
-
-Instead of waiting for the full page load, tests can wait for DOM content:
-
-```javascript
-await page.goto(`${baseUrl}/elements`, {
-  waitUntil: 'domcontentloaded',
-  timeout: 60000
-});
-```
-
-This improves test stability on slower pages.
-
----
-
-### 4. Missing Await Fixed
-
-Incorrect:
-
-```javascript
-textBoxPage.navigate();
-```
-
-Correct:
-
-```javascript
-await textBoxPage.navigate();
-```
-
-Reason:
-
-```text
-Without await, the test may start filling fields before the page is ready.
-```
-
----
-
-### 5. Proper Browser Teardown
-
-To avoid worker process leaks, the browser should be closed properly.
-
-```javascript
-afterAll(async () => {
-  await page.close();
-  await browser.close();
+browser = await chromium.launch({
+  headless: process.env.HEADED !== 'true'
 });
 ```
 
 ---
 
-### 6. Selector Improvements
+## Page Object Model
 
-Some older Playwright versions may not support selectors like:
-
-```javascript
-button:has-text("Click Me")
-```
-
-To improve compatibility, safer selectors and text-based handling were used.
-
----
-
-## Page Object Model Usage
-
-This project includes a basic Page Object Model structure.
+The project uses a basic Page Object Model structure to separate page-specific actions from test logic.
 
 Example:
 
 ```javascript
 const { TextBoxPage } = require('../pages/textBox');
+
+const textBoxPage = new TextBoxPage(page);
+
+await textBoxPage.navigate();
+await textBoxPage.fillForm(user);
 ```
 
-The Text Box page actions are separated into a reusable page class.
-
-Benefits of Page Object Model:
+Benefits:
 
 - Cleaner test files
 - Reusable page actions
 - Easier maintenance
-- Better structure for larger automation projects
+- Better scalability for larger automation frameworks
 
 ---
 
-## Example Test Scenario
+## API Helper Utility
 
-Example: Submit valid Text Box data.
+The project contains a Book Store API helper file:
+
+```text
+utilities/bookstoreApi.js
+```
+
+The API helper is used for API-supported test preparation and demonstrates knowledge of combining UI automation with backend/API operations.
+
+API helper responsibilities:
+
+- Authenticate a Book Store user
+- Store token-related data
+- Add books through API
+- Delete books through API
+
+This is useful in real QA automation projects because APIs can prepare test data faster than UI steps.
+
+---
+
+## Example UI Test
 
 ```javascript
-it('should submit valid text box data', async () => {
+test('should submit valid text box data', async () => {
   const textBoxPage = new TextBoxPage(page);
 
   await textBoxPage.navigate();
@@ -387,6 +363,7 @@ it('should submit valid text box data', async () => {
   await page.click('#submit');
 
   const output = await page.textContent('#output');
+
   expect(output).toContain(user.name);
   expect(output).toContain(user.email);
 });
@@ -394,61 +371,55 @@ it('should submit valid text box data', async () => {
 
 ---
 
-## API Helper Usage
+## Stability Improvements
 
-The project also includes API helper functions for the Book Store module.
+While building this project, several real-world automation issues were identified and improved.
 
-Example helper file:
-
-```text
-utilities/bookstoreApi.js
-```
-
-API helper responsibilities:
-
-- Authenticate user
-- Add book
-- Delete book
-- Reuse token-based API calls
-
-This shows understanding of both UI automation and API-supported test setup.
-
----
-
-## Challenges Faced
-
-While working on this project, several real-world automation challenges were handled:
-
-| Challenge | Solution |
+| Issue | Improvement |
 |---|---|
-| DemoQA website slow loading | Increased timeout and improved wait strategy |
-| DNS issue with www.demoqa.com | Updated base URL to demoqa.com |
-| Unstable full page load wait | Used DOM content loaded strategy |
-| Missing async/await | Added correct await usage |
-| Browser process not closing | Added browser close in teardown |
-| Unsupported selector syntax | Replaced with compatible selectors |
-| Public site instability | Used single-thread execution with `--runInBand` |
+| `www.demoqa.com` navigation issue | Updated base URL to `https://demoqa.com` |
+| Public website slow loading | Increased timeout and improved wait strategy |
+| Missing async/await usage | Added correct `await` handling |
+| Browser process not closing correctly | Added proper browser teardown |
+| Unsupported selector syntax in older Playwright version | Replaced with compatible selectors |
+| Parallel execution instability | Used `--runInBand` for stable execution |
+| Credential exposure risk | Used `user.json` locally and GitHub Secrets in CI |
 
 ---
 
-## What This Project Demonstrates
+## Skills Demonstrated
 
-This project demonstrates the following QA automation skills:
+This repository demonstrates the following QA and automation skills:
 
-- Playwright browser automation
+- UI test automation
+- End-to-end testing
+- Form validation testing
+- Negative test scenarios
+- Browser interaction testing
+- Playwright automation
 - JavaScript test scripting
 - Jest test execution
-- UI test automation
-- Form validation testing
-- Button interaction testing
-- Page Object Model usage
-- Test data handling using JSON
-- API helper creation
-- Test debugging
-- Timeout handling
-- Selector troubleshooting
-- Headless and headed browser execution
-- Real-world issue fixing
+- Page Object Model
+- Test data management
+- API helper implementation
+- Debugging and troubleshooting
+- Headless and headed test execution
+- GitHub Actions CI/CD
+- Secure secret handling
+- Test documentation
+
+---
+
+## Recommended Commands
+
+| Purpose | Command |
+|---|---|
+| Run all tests | `npm run test` |
+| Run tests one by one | `npm run test -- --runInBand` |
+| Run Elements tests only | `npm run test -- tests/elements.spec.js` |
+| Run Book Store tests only | `npm run test -- tests/bookstore.spec.js` |
+| Run a test by name | `npm run test -- -t "test name"` |
+| Debug open handles | `npm run test -- --detectOpenHandles` |
 
 ---
 
@@ -456,86 +427,30 @@ This project demonstrates the following QA automation skills:
 
 Planned improvements:
 
-- Add GitHub Actions CI pipeline
-- Add test reports
+- Add HTML test reporting
 - Add screenshots on failure
 - Add video recording for failed tests
-- Add Allure or HTML reporting
-- Improve API test coverage
-- Add cross-browser testing using Chromium, Firefox, and WebKit
-- Migrate to Playwright Test Runner for advanced reporting and tracing
-- Add environment-based configuration
-- Add retry strategy for unstable public site tests
+- Add Playwright trace viewer support
+- Add cross-browser testing with Firefox and WebKit
+- Add more API test coverage
+- Add manual test cases folder
+- Add sample bug reports
+- Add test execution screenshots to README
+- Migrate from Jest runner to Playwright Test Runner for advanced reporting
 
 ---
-
-## GitHub Actions Plan
-
-A future CI workflow can run the automation tests automatically when code is pushed to GitHub.
-
-Example workflow plan:
-
-```yaml
-name: DemoQA Automation Tests
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm run test -- --runInBand
-```
-
----
-
-## Recommended Package Scripts
-
-You can add these scripts to `package.json`:
-
-```json
-{
-  "scripts": {
-    "test": "jest --runInBand",
-    "test:elements": "jest tests/elements.spec.js --runInBand",
-    "test:bookstore": "jest tests/bookstore.spec.js --runInBand",
-    "test:debug": "jest --runInBand --detectOpenHandles"
-  }
-}
-```
-
----
-
-
 
 ## Notes
 
-DemoQA is a public practice website. Because of ads, network delay, and public server load, some tests may require higher timeout values or single-thread execution.
+DemoQA is a public practice website. Because of ads, network delay, and server load, some tests may require higher timeout values or single-thread execution.
 
-For stable local execution, the recommended command is:
+Recommended stable command:
 
 ```bash
 npm run test -- --runInBand
 ```
 
-For learning and debugging:
+For local debugging:
 
 ```powershell
 $env:HEADED="true"; npm run test -- --runInBand
@@ -549,9 +464,9 @@ $env:HEADED="true"; npm run test -- --runInBand
 
 QA Automation Enthusiast | Playwright | JavaScript | Manual Testing | API Testing
 
-GitHub: `https://github.com/AsardeenAzees`
+GitHub: [AsardeenAzees](https://github.com/AsardeenAzees)
 
-LinkedIn: `https://www.linkedin.com/in/asardeen-azees/`
+LinkedIn: [asardeen-azees](https://www.linkedin.com/in/asardeen-azees/)
 
 ---
 
