@@ -4,6 +4,7 @@ const booksData = require('../data/books.json');
 jest.setTimeout(90000);
 
 const baseUrl = 'https://demoqa.com';
+
 const isHeaded = process.env.HEADED === 'true';
 const expectedBook = booksData.books[0];
 
