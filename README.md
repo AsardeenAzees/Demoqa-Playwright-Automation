@@ -521,31 +521,7 @@ You can add these scripts to `package.json`:
 
 ---
 
-## Recommended QA Portfolio Additions
 
-To make this repository stronger for QA job applications, add the following folders:
-
-```text
-docs/screenshots/
-manual-test-cases/
-bug-reports/
-.github/workflows/
-```
-
-Suggested files:
-
-```text
-docs/screenshots/test-run-terminal.png
-docs/screenshots/headed-mode-demo.png
-manual-test-cases/elements-test-cases.md
-manual-test-cases/bookstore-test-cases.md
-bug-reports/demoqa-sample-bug-report.md
-.github/workflows/demoqa-tests.yml
-```
-
-These additions show both manual QA and automation QA skills.
-
----
 
 ## Notes
 
