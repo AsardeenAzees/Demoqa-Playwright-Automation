@@ -1,5 +1,7 @@
 # DemoQA Playwright Automation Project
 
+![DemoQA Playwright Automation Tests](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME/actions/workflows/demoqa-tests.yml/badge.svg)
+
 This repository contains an end-to-end test automation project for the [DemoQA](https://demoqa.com/) web application using **Playwright**, **JavaScript**, and **Jest**.
 
 The main purpose of this project is to demonstrate practical QA automation skills such as UI automation, test data handling, API helper usage, browser automation, assertions, reusable page objects, and stable test execution.
